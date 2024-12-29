@@ -1,0 +1,277 @@
+body{
+  font-family: arial;
+  background-color: rgb(42, 41, 41);
+}
+
+.TEXT{
+  padding: 10px 15px;
+  font-weight: bold;
+  color: rgb(144, 202, 249);
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  position: relative;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.TEXT:hover, .OUTLINED:hover, .DELETE:hover, .ONE-one:hover, .TWO-two:hover, .THREE-three:hover, .ONE-on:hover, .TWO-tw:hover, .THREE-thre:hover {
+  background-color: rgba(61, 71, 81, 0.3);
+  cursor: pointer;
+}
+
+.CONTAINED {
+  color: rgb(0, 0, 0);
+  background-color: rgb(144, 202, 249);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+
+}
+
+.CONTAINED:hover, .SEND:hover, .ONE:hover, .TWO:hover, .THREE:hover, .name:hover, .down:hover, .squash:hover, .dropdown:hover {
+  background-color: rgb(66, 165, 245);
+  cursor: pointer;
+}
+
+.OUTLINED {
+  color: rgb(144, 202, 249);
+  background-color: transparent;
+  border: 1px solid rgb(144, 202, 249);
+  border-radius: 4px;
+  padding: 10px 15px;
+}
+
+.DISABLED{
+  color-scheme: dark;
+  background: transparent;
+  border: none;
+  padding: 10px 15px;
+}
+
+.delete-button, .send-button {
+  position: relative;
+  display: inline-block;
+}
+
+.DELETE {
+  color: rgb(144, 202, 249);
+  background-color: transparent;
+  border: 1px solid rgb(144, 202, 249);
+  padding: 10px 15px 10px 35px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.delete-icon {
+  width: 20px;
+  color: rgb(144, 202, 249);
+  position: absolute;
+  top: 17px;
+  left: 9px;
+}
+
+.SEND {
+  color: rgb(0, 0, 0);
+  background-color: rgb(144, 202, 249);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 40px 10px 15px;
+  margin-left: 10px;
+}
+
+.send-icon {
+  width: 22px;
+  position: absolute;
+  right: 10px;
+  top: 6px;
+}
+
+.horizontal {
+  display: flex;
+}
+
+.button-group {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 10px;
+  align-items: center;
+}
+
+.ONE {
+  background-color: rgb(144, 202, 249);
+  padding: 10px 15px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-right: 1px solid rgb(66, 165, 245) ;
+}
+
+.TWO {
+  background-color: rgb(144, 202, 249);
+  padding: 10px 15px;
+}
+
+.THREE {
+  background-color: rgb(144, 202, 249);
+  padding: 10px 15px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-left: 1px solid rgb(66, 165, 245) ;
+}
+
+.ONE-one {
+  background-color: transparent;
+  color: rgb(144, 202, 249);
+  border: 1px solid rgb(144, 202, 249);
+  padding: 10px 15px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;  
+}
+
+.TWO-two {
+  background-color: transparent;
+  color: rgb(144, 202, 249);
+  border: 1px solid rgb(144, 202, 249);
+  padding: 10px 15px;
+}
+
+.THREE-three {
+  background-color: transparent;
+  color: rgb(144, 202, 249);
+  border: 1px solid rgb(144, 202, 249);
+  padding: 10px 15px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;  
+}
+
+.ONE-on {
+  background-color: transparent;
+  color: rgb(144, 202, 249);
+  border-right: 1px solid rgb(144, 202, 249);
+  padding: 10px 10px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;  
+}
+
+.TWO-tw {
+  background-color: transparent;
+  color: rgb(144, 202, 249);
+  border: none;
+  padding: 10px 10px;
+}
+
+.THREE-thre {
+  background-color: transparent;
+  color: rgb(144, 202, 249);
+  border-left: 1px solid rgb(144, 202, 249);
+  padding: 10px 10px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;  
+}
+
+.button-group-stack {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 10px;
+  align-items: center;
+  display: inline-block;
+  text-align: center;
+}
+
+.ONE-stack {
+  color: rgb(144, 202, 249);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border: 1px solid rgb(144, 202, 249);
+  padding: 10px 15px;
+}
+
+.TWO-stack {
+  color: rgb(144, 202, 249);
+  border: 1px solid rgb(144, 202, 249);
+  padding: 10px 15px;
+}
+
+.THREE-stack {
+  color: rgb(144, 202, 249);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border: 1px solid rgb(144, 202, 249);
+  padding: 10px 15px;
+}
+
+.navbar {
+  display: flex;
+  margin-top: 20px;
+  overflow: hidden;
+  font-family: Arial;
+}
+
+.home {
+  background-color: rgb(144, 202, 249);
+  border-right: 1px solid rgb(66, 165, 245);
+  padding: 10px 15px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  position: relative;
+  padding: 10px 15px;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  background-color: rgb(144, 202, 249);
+  font-family: inherit;
+  margin: 0; 
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.home:hover, .dropbtn:hover{
+  background-color: rgb(66, 165, 245);
+  cursor: pointer;
+}
+
+.triangle-down {
+  width: 20px;
+  background-color: transparent;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(42, 41, 41);
+  min-width: 160px;
+  z-index: 1;
+  top: 354px;
+  left: 0px;
+}
+
+.dropdown-content a {
+  float: none;
+  display: block;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(61, 71, 81);
+  padding: 12px 16px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(42, 41, 41);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
