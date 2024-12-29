@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+      body{
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        display: flex;
+      }
+
+      .breakfast{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 640px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .breakfast img {
+        width: 640px;
+        height: 585px;
+        object-fit: cover;
+        filter: brightness(50%);
+      }
+
+      .breakfast button{
+        position: absolute;
+        color: white;
+        border: none;
+        font-size: 20px;
+        font-weight: bolder;
+        padding: 20px 30px;
+        background-color: transparent;
+      }
+
+      .breakfast button::after {
+        content: "";
+        position: absolute;
+        height: 4px;
+        background: rgb(255, 255, 255);
+        top: 100%;
+        width: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .bugger {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 320px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .bugger img {
+        width: 320px;
+        height: 585px;
+        object-fit: cover;
+        filter: brightness(50%);
+      }
+
+      .bugger button {
+        position: absolute;
+        color: white;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 20px 30px;
+        background-color: transparent;
+      }
+
+      .bugger button::after {
+        content: "";
+        position: absolute;
+        height: 4px;
+        background: rgb(255, 255, 255);
+        top: 100%;
+        width: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .camera{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 320px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .camera img {
+        width: 320px;
+        height: 585px;
+        object-fit: cover;
+        filter: brightness(50%);
+      }
+
+      .camera button {
+        position: absolute;
+        color: white;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 20px 30px;
+        background-color: transparent;
+      }
+
+      .camera button::after {
+        content: "";
+        position: absolute;
+        height: 4px;
+        background: rgb(255, 255, 255);
+        top: 100%;
+        width: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .breakfast:hover img, .bugger:hover img, .camera:hover img {
+        filter: brightness(100%);
+        cursor: pointer;
+      }
+
+      .breakfast:hover button, .bugger:hover button, .camera:hover button {
+        border: 4px solid white;
+        cursor: pointer;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="breakfast">
+        <img src="breakfast-work-desk-two-croissants-cup-coffee-notebook-notes-next-to-laptop-window-341571673.webp" alt="">
+        <button>Breakfast</button>
+      </div>
+      <div class="bugger">
+        <img  src="71bba2d0-b6b7-452c-a9f4-71d9df3a16a2_789121.avif" alt="">
+        <button>Buggers</button>
+      </div>
+      <div class="camera">
+        <img src="Lubitel-2-Vintage-Camera-6.webp" alt="">
+        <button>Camera</button>
+      </div>
+    </div>
+  </body>
+</html>
