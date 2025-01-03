@@ -1,0 +1,418 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(29, 33, 38);
+  font-family: arial;
+  color: white;
+}
+
+p {
+  margin: 0;
+}
+
+.text-gery {
+  color: rgba(255, 255, 255, 0.3);
+  user-select: none;
+}
+
+.vertical {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-right: 55px;
+}
+
+.radio-btn-female {
+  width: 40px;
+  height: 40px;
+  border: none;
+  margin-left: 15.5px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.radio-btn-male {
+  width: 40px;
+  height: 40px;
+  border: none;
+  margin-left: -3.5px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.radio-btn-other {
+  width: 40px;
+  height: 40px;
+  border: none;
+  margin-left: 2px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.radio-btn-female:hover, .radio-btn-male:hover, .radio-btn-other:hover, .radio-btn-female-sec:hover, .radio-btn-male-sec:hover, .radio-btn-other-sec:hover, .radio-btn-small:hover, .radio-btn-large:hover {
+  background-color: rgba(144, 202, 249, 0.08);
+  cursor: pointer;
+}
+
+/* Hide the default checkbox */
+.custom-radio input[type="radio"], .custom-radio-gery input[type="radio"], .custom-radio-small input[type="radio"], .custom-radio-large input[type="radio"], .custom-radio-pink input[type="radio"], .custom-radio-green input[type="radio"], .custom-radio-gray input[type="radio"], .custom-radio-red input[type="radio"],.custom-radio-sec input[type="radio"], .custom-radio-gery-sec input[type="radio"] {
+  display: none;
+}
+
+/* Style the custom checkbox */
+.custom-radio .checkmark, .custom-radio-pink .checkmark-pink, .custom-radio-green .checkmark-green, .custom-radio-gray .checkmark-gray {
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+}
+
+/* Style for checked state */
+.custom-radio input[type="radio"]:checked + .checkmark, .custom-radio-small input[type="radio"]:checked + .checkmark-small, .custom-radio-large input[type="radio"]:checked + .checkmark-large {
+  border-color: rgb(144, 202, 249);
+}
+
+/* Style for the checkmark */
+.custom-radio input[type="radio"]:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 2.6px;
+  left: 2.6px;
+  border-radius: 50%;
+  background-color: rgb(144, 202, 249);
+}
+
+.sec {
+  display: block;
+  margin-left: -50px;
+}
+
+.container-sec {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.vertical-sec {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.radio-btn-female-sec {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  margin-left: -60px;
+}
+.radio-btn-male-sec {
+  width: 40px;
+  height: 40px;
+  border: none;
+  margin-left: 5px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.radio-btn-other-sec {
+  width: 40px;
+  height: 40px;
+  border: none;
+  margin-left: 5px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.radio-btn-other-gery {
+  width: 40px;
+  height: 40px;
+  border: none;
+  margin-left: 5px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+/* Style the custom checkbox */
+.custom-radio-gery .checkmark-gery {
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+}
+
+.container-btns {
+  text-align: center;
+  padding-right: 15px;
+}
+
+.container-btns-sec {
+  text-align: center;
+}
+
+.radio-btn-small {
+  width: 38px;
+  height: 38px;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+/* Style the custom checkbox */
+.custom-radio-small .checkmark-small {
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+}
+
+/* Style for the checkmark */
+.custom-radio-small input[type="radio"]:checked + .checkmark-small::after {
+  content: "";
+  position: absolute;
+  width: 8.5px;
+  height: 8.5px;
+  top: 2px;
+  left: 1.7px;
+  border-radius: 50%;
+  background-color: rgb(144, 202, 249);
+}
+
+.radio-btn-large {
+  width: 42px;
+  height: 42px;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+/* Style the custom checkbox */
+.custom-radio-large .checkmark-large {
+  width: 17.5px;
+  height: 17.5px;
+  border: 2.7px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+}
+
+/* Style for the checkmark */
+.custom-radio-large input[type="radio"]:checked + .checkmark-large::after {
+  content: "";
+  position: absolute;
+  width: 11.5px;
+  height: 11.5px;
+  top: 3px;
+  left: 3.5px;
+  border-radius: 50%;
+  background-color: rgb(144, 202, 249);
+}
+
+.radio-btn-pink {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.radio-btn-pink:hover {
+  background-color: rgba(206, 147, 216, 0.08);
+  cursor: pointer;
+}
+
+.custom-radio-pink input[type="radio"]:checked + .checkmark-pink::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 2.5px;
+  left: 2.5px;
+  border-radius: 50%;
+  background-color: rgb(206, 147, 216);
+}
+
+.custom-radio-pink input[type="radio"]:checked + .checkmark-pink {
+  border-color: rgb(206, 147, 216);
+}
+
+.radio-btn-green {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.radio-btn-green:hover {
+  background-color: rgba(102, 187, 106, 0.08);
+}
+
+.custom-radio-green input[type="radio"]:checked + .checkmark-green::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 2.5px;
+  left: 2.65px;
+  border-radius: 50%;
+  background-color: rgb(102, 187, 106);
+}
+
+.custom-radio-green input[type="radio"]:checked + .checkmark-green {
+  border-color: rgb(102, 187, 106);
+}
+
+.radio-btn-gray {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.radio-btn-gray:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.custom-radio-gray input[type="radio"]:checked + .checkmark-gray::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 2.5px;
+  left: 2.65px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.custom-radio-grey input[type="radio"]:checked + .checkmark-grey {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.custom-radio-red .checkmark-red {
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(216, 27, 96);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+}
+
+.custom-radio-red input[type="radio"]:checked + .checkmark-red::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 2.6px;
+  left: 2.6px;
+  border-radius: 50%;
+  background-color:  rgba(216, 27, 96);
+}
+
+.custom-radio-red input[type="radio"]:checked + .checkmark-red {
+  border-color: rgba(216, 27, 96);
+}
+
+.container-tri {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.custom-radio-sec, .custom-radio-sec-gery {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-top: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.custom-radio-sec input, .custom-radio-sec-gery input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark-sec {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: rgb(57, 75, 89);
+  border-radius: 50%;
+}
+
+.checkmark-sec-gery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: rgba(57, 75, 89, 0.5);
+  border-radius: 50%;
+  user-select: none;
+}
+
+.custom-radio-sec:hover input ~ .checkmark-sec {
+  background-color: rgba(57, 75, 89, 0.5);
+}
+
+.custom-radio-sec input:checked ~ .checkmark-sec {
+  background-color: #2196f3;
+}
+
+.checkmark-sec::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-radio-sec input:checked ~ .checkmark-sec::after {
+  display: block;
+}
+
+.custom-radio-sec .checkmark-sec::after {
+  top: 4.5px;
+  left: 4.5px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: white;
+}
