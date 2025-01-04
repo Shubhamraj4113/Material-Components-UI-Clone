@@ -1,0 +1,140 @@
+body{
+  background-color: rgb(26, 28, 30);
+  font-family: arial;
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.container {
+  position: relative;
+  justify-content: center;
+  width: 290px;
+  height: 40px;
+}
+
+.triangle-dwn-btn img {
+  width: 15px;
+  margin-top: 5px;
+}
+
+.autocomplete-container input[type="text"] {
+  height: 40px;
+  width: 270px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #636060;
+  background-color: transparent;
+  border-radius: 4px;
+}
+.autocomplete-container input[type="text"]:hover {
+  border-color: white;
+}
+.autocomplete-container input[type="text"]:focus {
+  outline: 1.5px solid rgb(144, 202, 249);
+  color: white;
+}
+
+/* Label-like placeholder text */
+.placeholder-label {
+  position: absolute;
+  color: #888;
+  top: 20px;
+  left: 10px;
+  font-size: 16px;
+  font-family: arial;
+  font-weight: bold;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+/* Move placeholder when focused or has content */
+.autocomplete-container input[type="text"]:focus + .placeholder-label,
+.autocomplete-container input[type="text"]:not(:placeholder-shown) + .placeholder-label {
+  font-size: 14px;
+  font-weight: lighter;
+  top: -8px;
+  color: rgb(144, 202, 249);
+  background: rgb(26, 28, 30);
+  padding: 0px 4px;
+}
+
+.triangle-dwn-btn {
+  position: absolute;
+  top: 12px;
+  right: 5px;
+  height: 35px;
+  width: 35px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+.triangle-dwn-btn:hover {
+  background-color: rgb(29, 33, 38);
+}
+
+
+.autocomplete-container-sec input[type="text"] {
+  height: 25px;
+  width: 270px;
+  padding: 12px 0px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #636060;
+  background-color: transparent;
+}
+.autocomplete-container-sec input[type="text"]:hover {
+  border-color: white;
+}
+.autocomplete-container-sec input[type="text"]:focus {
+  color: white;
+  border-bottom: 2px solid rgb(144, 202, 249);
+  outline: none;
+}
+.autocomplete-container-sec input[type="text"]:focus + .placeholder-label-sec,
+.autocomplete-container-sec input[type="text"]:not(:placeholder-shown) + .placeholder-label-sec {
+  font-size: 14px;
+  font-weight: lighter;
+  top: -8px;
+  color: rgb(144, 202, 249);
+  background: rgb(26, 28, 30);
+  padding: 0px 4px;
+}
+.placeholder-label-sec {
+  position: absolute;
+  color: #888;
+  top: 20px;
+  left: 0px;
+  font-size: 16px;
+  font-family: arial;
+  font-weight: bold;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+.triangle-dwn-btn-sec {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  height: 35px;
+  width: 35px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+.triangle-dwn-btn-sec:hover {
+  background-color: rgb(29, 33, 38);
+}
+.triangle-dwn-btn-sec img {
+  width: 15px;
+  margin-top: 5px;
+}
+
+
+

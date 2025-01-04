@@ -1,0 +1,336 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(29, 33, 38);
+}
+
+.checkbox-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 23px;
+  border: none;
+  background-color: transparent;
+}
+
+.checkbox-btn:hover, .checkbox-btn-vertical:hover, .checkbox-btn-small:hover, .checkbox-btn-large:hover {
+  background-color: rgba(144, 202, 249, 0.08);
+  cursor: pointer;
+}
+
+/* Hide the default checkbox */
+.custom-checkbox input[type="checkbox"], .custom-checkbox-three input[type="checkbox"], .custom-checkbox-four input[type="checkbox"], .custom-checkbox-vertical input[type="checkbox"], .custom-checkbox-small input[type="checkbox"], .custom-checkbox-large input[type="checkbox"], .custom-checkbox-pink input[type="checkbox"], .custom-checkbox-green input[type="checkbox"], .custom-checkbox-grey input[type="checkbox"], .custom-checkbox-red input[type="checkbox"]  {
+  display: none;
+}
+
+/* Style the custom checkbox */
+.custom-checkbox .checkbox, .custom-checkbox-pink .checkbox-pink, .custom-checkbox-green .checkbox-green, .custom-checkbox-grey .checkbox-grey, .custom-checkbox-red .checkbox-red {
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+}
+
+/* Style for checked state */
+.custom-checkbox input[type="checkbox"]:checked + .checkbox, .custom-checkbox-small input[type="checkbox"]:checked + .checkbox-small, .custom-checkbox-large input[type="checkbox"]:checked + .checkbox-large  {
+  background-color: rgb(144, 202, 249);
+  border-color: rgb(144, 202, 249);
+}
+
+/* Style for the checkmark */
+.custom-checkbox input[type="checkbox"]:checked + .checkbox::after, .custom-checkbox-pink input[type="checkbox"]:checked + .checkbox-pink::after, .custom-checkbox-green input[type="checkbox"]:checked + .checkbox-green::after, .custom-checkbox-grey input[type="checkbox"]:checked + .checkbox-grey::after, .custom-checkbox-red input[type="checkbox"]:checked + .checkbox-red::after  {
+  content: "";
+  position: absolute;
+  left: 4px;
+  bottom: 3px;
+  width: 5px;
+  height: 12px;
+  border: solid rgb(29, 33, 38);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(47deg);
+  -ms-transform: rotate(47deg);
+  transform: rotate(47deg);
+}
+
+.checkbox-btn-three, .checkbox-btn-four {
+  width: 45px;
+  height: 45px;
+  border-radius: 23px;
+  border: none;
+  background-color: transparent; 
+}
+
+.custom-checkbox-three .checkbox-three, .custom-checkbox-four .checkbox-four {
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+}
+
+.custom-checkbox-four input[type="checkbox"]:checked + .checkbox-four::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  bottom: 3px;
+  width: 5px;
+  height: 12px;
+  border: solid rgb(29, 33, 38);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(47deg);
+  -ms-transform: rotate(47deg);
+  transform: rotate(47deg);
+}
+
+.custom-checkbox-four input[type="checkbox"]:disabled + .checkbox-four  {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.0);
+}
+
+.container-sec {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(29, 33, 38);
+}
+
+.vertical {
+  display: flex;
+}
+
+.text {
+  color: white;
+  font-family: arial;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.text-disabled {
+  color: rgba(255, 255, 255, 0.3);
+  font-family: arial;
+  font-size: 17px;
+  margin-top: 14px;
+}
+
+.checkbox-btn-small {
+  padding: 0px 0px 1px 0px;
+  width: 35px;
+  height: 35px;
+  border-radius: 23px;
+  border: none;
+  background-color: transparent;
+}
+
+.custom-checkbox-small .checkbox-small {
+  width: 12px;
+  height: 12px;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+}
+
+.custom-checkbox-small input[type="checkbox"]:checked + .checkbox-small::after {
+  content: "";
+  position: absolute;
+  left: 3.5px;
+  bottom: 3px;
+  width: 3px;
+  height: 7px;
+  border: solid rgb(29, 33, 38);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(47deg);
+  -ms-transform: rotate(47deg);
+  transform: rotate(47deg);
+}
+
+.checkbox-btn-large {
+  padding: 0px 0px 1px 0px;
+  width: 55px;
+  height: 55px;
+  border-radius: 28px;
+  border: none;
+  background-color: transparent;
+}
+
+.custom-checkbox-large .checkbox-large {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+}
+
+.custom-checkbox-large input[type="checkbox"]:checked + .checkbox-large::after {
+  content: "";
+  position: absolute;
+  left: 4.5px;
+  bottom: 3px;
+  width: 8px;
+  height: 16px;
+  border: solid rgb(29, 33, 38);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(47deg);
+  -ms-transform: rotate(47deg);
+  transform: rotate(47deg);
+}
+
+.custom-checkbox-pink input[type="checkbox"]:checked + .checkbox-pink {
+  background-color: rgb(206, 147, 216);
+  border-color: rgb(206, 147, 216);
+}
+
+.custom-checkbox-green input[type="checkbox"]:checked + .checkbox-green {
+  background-color: rgb(102, 187, 106);
+  border-color: rgb(102, 187, 106);
+}
+
+.custom-checkbox-grey input[type="checkbox"]:checked + .checkbox-grey {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 255, 255, 0.0);
+}
+
+.custom-checkbox-red input[type="checkbox"]:checked + .checkbox-red {
+  background-color: rgba(216, 27, 96);
+  border-color: rgba(216, 27, 96);
+}
+
+/* Hide default checkbox */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Heart shape container */
+.heart {
+  margin-right: 15px;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  transform: rotate(-45deg);
+  background-color: rgba(255, 255, 255);
+  transition: background-color 0.3s ease;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(255, 255, 255);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.heart::before {
+  top: -7px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 7px;
+}
+
+/* Change color when checkbox is checked */
+input[type="checkbox"]:checked + .heart {
+  background-color: rgb(144, 202, 249);
+}
+
+input[type="checkbox"]:checked + .heart::before,
+input[type="checkbox"]:checked + .heart::after {
+  background-color: rgb(144, 202, 249);
+}
+
+.container-heart {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(29, 33, 38);
+  height: 100px;
+}
+
+/* Hide default checkbox */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Bookmark container */
+.bookmark {
+  margin-left: 15px;
+  width: 14px;
+  height: 22px;
+  position: relative;
+  background-color: transparent;
+  border: 2px solid #ccc;
+  border-bottom: transparent;
+  border-radius: 3px 3px 0 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Bookmark triangle (bottom) */
+.bookmark::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -2px;
+  right: 0;
+  width: 0;
+  height: 0;
+  transform: rotate(180deg);
+  border-left: 9.34px solid transparent;
+  border-right: 9.33px solid transparent;
+  border-top: 5px solid rgba(255, 255, 255, 0.7); /* Match border color */
+  transition: all 0.3s ease;
+}
+
+/* Checked state */
+input[type="checkbox"]:checked + .bookmark {
+  background-color: rgb(144, 202, 249);
+  border-color: rgb(144, 202, 249);
+}
+
+input[type="checkbox"]:checked + .bookmark::after {
+  border-top-color: rgb(29, 33, 38);
+}
+.custom-checkbox .checkbox, .custom-checkbox-pink .checkbox-pink, .custom-checkbox-green .checkbox-green, .custom-checkbox-grey .checkbox-grey, .custom-checkbox-red .checkbox-red {
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+}
+
