@@ -1,0 +1,195 @@
+body{
+  background-color: rgb(26, 28, 30);
+  font-family: arial;
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  gap: 30px;
+}
+
+.container {
+  position: relative;
+  justify-content: center;
+  height: 40px;
+}
+
+.triangle-dwn-btn img, .triangle-dwn-btn-sec img {
+  width: 15px;
+  margin-top: 5px;
+}
+
+.autocomplete-container input[type="text"] {
+  height: 40px;
+  width: 92px;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  border-radius: 4px;
+}
+.autocomplete-container input[type="text"]:hover {
+  border-color: white;
+}
+.autocomplete-container input[type="text"]:focus {
+  outline: 1.5px solid rgb(144, 202, 249);
+  color: white;
+}
+
+/* Label-like placeholder text */
+.placeholder-label {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  top: 20px;
+  left: 14px;
+  font-size: 16px;
+  font-family: arial;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+/* Move placeholder when focused or has content */
+input[type="text"]:focus + .placeholder-label, input[type="text"]:not(:placeholder-shown) + .placeholder-label,input[type="text"]:focus:not(:placeholder-shown) + .placeholder-label  {
+  font-size: 14px;
+  font-weight: lighter;
+  top: -8px;
+  color: rgb(144, 202, 249);
+  background: rgb(26, 28, 30);
+  padding: 0px 4px;
+}
+input[type="text"]:not(:placeholder-shown) + .placeholder-label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.triangle-dwn-btn {
+  position: absolute;
+  top: 12px;
+  right: 4px;
+  height: 35px;
+  width: 35px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+
+.autocomplete-container-sec input[type="text"] {
+  height: 20px;
+  width: 92px;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+}
+.autocomplete-container-sec input[type="text"]:hover {
+  border-color: white;
+  cursor: pointer;
+}
+.autocomplete-container-sec input[type="text"]:focus {
+  color: white;
+  outline: 1px solid rgb(26, 28, 30);
+  border-bottom-color: rgb(144, 202, 249);
+}
+.triangle-dwn-btn-sec {
+  position: absolute;
+  top: 8px;
+  right: -8px;
+  height: 35px;
+  width: 35px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+.placeholder-label-sec {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  top: 15px;
+  left: 0px;
+  font-size: 16px;
+  font-family: arial;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+/* Move placeholder when focused or has content */
+input[type="text"]:focus + .placeholder-label-sec, input[type="text"]:not(:placeholder-shown) + .placeholder-label-sec,input[type="text"]:focus:not(:placeholder-shown) + .placeholder-label-sec  {
+  font-size: 14px;
+  font-weight: lighter;
+  top: -8px;
+  color: rgb(144, 202, 249);
+  background: transparent;
+  padding: 0px 4px;
+}
+input[type="text"]:not(:placeholder-shown) + .placeholder-label-sec {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.autocomplete-container-tri input[type="text"] {
+  height: 35px;
+  width: 100px;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: rgba(133, 133, 133, 0.15);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border: none;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+.autocomplete-container-tri input[type="text"]:hover {
+  border-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+.autocomplete-container-tri input[type="text"]:focus {
+  outline: 1.5px solid rgb(144, 202, 249);
+  color: white;
+  border-bottom-color: rgb(144, 202, 249);
+}
+
+.autocomplete-container-quad input[type="text"]{
+  width: 220px;
+  padding: 15px 0px 8px 10px;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  background-color: rgba(18, 18, 18, 0.6);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 4px;
+}
+.autocomplete-container-quad input[type="text"]:focus {
+  border: 1px solid rgb(144, 202, 249);
+  box-shadow: 0px 0px 0px 2.5px rgba(0, 123, 255, 0.25);
+  outline: none;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+}
+.placeholder-label-tri {
+  position: absolute;
+  color: transparent;
+  top: 12px;
+  left: 10px;
+  font-size: 16px;
+  font-family: arial;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+/* Move placeholder when focused or has content */
+input[type="text"]:focus + .placeholder-label-tri, input[type="text"]:not(:placeholder-shown) + .placeholder-label-tri,input[type="text"]:focus:not(:placeholder-shown) + .placeholder-label-tri  {
+  font-size: 14px;
+  font-weight: lighter;
+  top: -25px;
+  left: 0px;
+  color: rgb(144, 202, 249);
+  background: rgb(26, 28, 30);
+  padding: 0px 4px;
+}
+input[type="text"]:not(:placeholder-shown) + .placeholder-label-tri {
+  color: rgba(255, 255, 255, 0.7);
+}
