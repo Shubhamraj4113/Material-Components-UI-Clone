@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slider</title>
+    <link rel="stylesheet" href="Slider.css">
+  </head>
+  <body>
+
+    <div class="box">
+      <div class="container">
+        <img src="volume-down-solid-svgrepo-com.svg" alt="">
+        <input type="range" min="0" max="100" value="50" class="slider dual-color-slider">
+        <img src="volume-up-solid-svgrepo-com.svg" alt="">
+      </div>
+      <input type="range" min="0" max="100" value="30" class="slider-sec" disabled>
+    </div>
+    <div class="container-sec">
+      <input type="range" min="0" max="100" value="70" step="10" class="slider-tri dual-color-slider">
+      <input type="range" min="0" max="100" value="50" class="slider-tri-sec dual-color-slider" >
+      <input type="range" min="0" max="100" value="30" class="slider-tri-tri dual-color-slider-sec" >
+    </div>
+      
+    <div class="container-tri">
+      <p class="apple">iOS</p>
+      <input type="range" min="0" max="100" value="60" class="slider-quad dual-color-slider-tri" >
+    </div>
+    <div class="container-tri">
+      <p class="pretto">pretto.fr</p>
+      <input type="range" min="0" max="100" value="60" class="slider-five dual-color-slider-five" >
+    </div>
+
+    <div class="music-player">
+      <div class="music-box">
+        <div class="top">
+          <img class="cover" src="chilling-sunday.jpg" alt="">
+          <div class="top-right">
+            <div class="Name">Jun Pulse</div>
+            <div class="music-detail">คนเก่าเขาทำไว้ดี (Can't wi...</div>
+            <div class="music-detail-sec">Chilling Sunday — คนเก่าเขา...</div>    
+          </div>  
+        </div>
+        <div class="mid">
+          <input type="range" min="0" max="100" value="30" class="slider-six dual-color-slider-six">
+        </div>
+        <div class="bottom">
+          <div class="bottom-top">
+            <button class="skip">
+              <img src="music-music-player-player-2-svgrepo-com.svg" alt="">
+            </button>
+            <button class="play">
+              <img src="media-play-svgrepo-com.svg" alt="">
+            </button>
+            <button class="skip">
+              <img src="music-next-next-button-svgrepo-com.svg" alt="">
+            </button>
+          </div>
+          <div class="bottom-down">
+            <img src="volume-down-solid-svgrepo-com.svg" alt="">
+            <input type="range" min="0" max="100" value="40" class="slider-seven dual-color-slider-seven">
+            <img src="volume-up-solid-svgrepo-com.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+    
+
+    <script>
+      const sliders = document.querySelectorAll('.dual-color-slider');
+
+      sliders.forEach(slider => {
+        slider.addEventListener('input', function() {
+          const value = this.value;
+          this.style.background = `linear-gradient(to right, rgb(144, 202, 249) ${value}%, rgba(144, 202, 249, 0.3) ${value}%)`;
+        });
+      });
+
+      const slider = document.querySelectorAll('.dual-color-slider-sec');
+
+      slider.forEach(slider => {
+        slider.addEventListener('input', function() {
+          const value = this.value;
+          this.style.background = `linear-gradient(to right, rgb(206, 147, 216) ${value}%, rgba(206, 147, 216, 0.3) ${value}%)`;
+        });
+      });
+
+      const sliderApple = document.querySelectorAll('.dual-color-slider-tri');
+
+      sliderApple.forEach(slider => {
+        slider.addEventListener('input', function() {
+          const value = this.value;
+          this.style.background = `linear-gradient(to right, rgb(10, 132, 255) ${value}%, rgba(255, 255, 255, 0.4) ${value}%)`;
+        });
+      });
+
+      const sliderpretto = document.querySelectorAll('.dual-color-slider-five');
+
+      sliderpretto.forEach(slider => {
+        slider.addEventListener('input', function() {
+          const value = this.value;
+          this.style.background = `linear-gradient(to right, rgb(10, 132, 255) ${value}%, rgba(255, 255, 255, 0.4) ${value}%)`;
+        });
+      });
+
+      const slidersix = document.querySelectorAll('.dual-color-slider-six');
+
+      slidersix.forEach(slider => {
+        slider.addEventListener('input', function() {
+          const value = this.value;
+          this.style.background = `linear-gradient(to right, rgb(255, 255, 255) ${value}%, rgba(255, 255, 255, 0.3) ${value}%)`;
+        });
+      });
+
+      const sliderseven = document.querySelectorAll('.dual-color-slider-seven');
+
+      sliderseven.forEach(slider => {
+        slider.addEventListener('input', function() {
+          const value = this.value;
+          this.style.background = `linear-gradient(to right, rgb(255, 255, 255) ${value}%, rgba(255, 255, 255, 0.3) ${value}%)`;
+        });
+      });
+    </script>
+    
+  </body>
+</html>
