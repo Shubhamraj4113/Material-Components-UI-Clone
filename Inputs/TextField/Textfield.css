@@ -1,0 +1,548 @@
+body{
+  background-color: rgb(26, 28, 30);
+  font-family: arial;
+  margin: 0;
+  padding: 0;
+}
+
+.index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 240px 240px;
+}
+
+.container, .container-sec, .container-tri, .container-ver2, .container-dark, .container-number, .container-dark-sec, .container-number-sec, .container-number-tri, .container-dark-tri, .container-contact, .container-contact-sec, .container-pink, .container-green, .container-orange {
+  position: relative;
+}
+
+.container input, .container-number input {
+  height: 40px;
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  border-radius: 4px;
+  margin-bottom: 25px;
+}
+.container input:hover, .container-sec input:hover, .container-number input:hover, .container-number-tri input:hover, .container-contact input:hover {
+  border-color: white;
+}
+.container input:focus, .container-number input:focus {
+  outline: 1.5px solid rgb(144, 202, 249);
+  color: white;
+}
+/* Label-like placeholder text */
+.placeholder-label, .placeholder-label-number {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  top: 20px;
+  left: 14px;
+  font-size: 16px;
+  font-family: arial;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+/* Move placeholder when focused or has content */
+input:focus + .placeholder-label, input:not(:placeholder-shown) + .placeholder-label, input:focus:not(:placeholder-shown) + .placeholder-label  {
+  font-size: 12px;
+  font-weight: lighter;
+  top: -8px;
+  left: 8px;
+  color: rgb(144, 202, 249);
+  background: rgb(26, 28, 30);
+  padding: 0px 4px;
+}
+input:not(:placeholder-shown) + .placeholder-label, input:not(:placeholder-shown) + .placeholder-label-sec {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.container-sec input, .container-number-tri input {
+  height: 20px;
+  width: 200px;
+  padding: 10px 10px 6px 0px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  margin-bottom: 25px;
+}
+.container-sec input:focus, .container-number-tri input:focus {
+  color: white;
+  outline: 1px solid rgb(26, 28, 30);
+  border-bottom-color: rgb(144, 202, 249);
+}
+.placeholder-label-sec {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  top: 9px;
+  left: 0px;
+  font-size: 16px;
+  font-family: arial;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+/* Move placeholder when focused or has content */
+input:focus + .placeholder-label-sec, input:not(:placeholder-shown) + .placeholder-label-sec,input:focus:not(:placeholder-shown) + .placeholder-label-sec  {
+  font-size: 12px;
+  font-weight: lighter;
+  top: -8px;
+  left: 0px;
+  color: rgb(144, 202, 249);
+  background: transparent;
+  padding: 0px 0px;
+}
+
+.container-tri input, .container-number-sec input {
+  height: 40px;
+  width: 200px;
+  padding: 17px 0px 0px 10px; 
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(133, 133, 133, 0.15);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border: none;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 25px;
+}
+.container-tri input:hover, .container-number-sec input:hover {
+  border-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+.container-tri input:focus, .container-number-sec input:focus {
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+  border-bottom-color: rgb(144, 202, 249);
+}
+.placeholder-label-tri {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  top: 20px;
+  left: 12px;
+  font-size: 16px;
+  font-family: arial;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+/* Move placeholder when focused or has content */
+input:focus + .placeholder-label-tri, input:not(:placeholder-shown) + .placeholder-label-tri,input:focus:not(:placeholder-shown) + .placeholder-label-tri  {
+  font-size: 12px;
+  font-weight: lighter;
+  top: 10px;
+  left: 10px;
+  color: rgb(144, 202, 249);
+  background: transparent;
+}
+
+.container-dark input {
+  height: 40px;
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background-color: transparent;
+  border-radius: 4px;
+  margin-bottom: 25px;
+}
+.placeholder-label-dark {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  top: 20px;
+  left: 14px;
+  font-size: 16px;
+  font-family: arial;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+input:focus + .placeholder-label-dark, input:not(:placeholder-shown) + .placeholder-label-dark,input:focus:not(:placeholder-shown) + .placeholder-label-dark  {
+  font-size: 12px;
+  top: -8px;
+  left: 6px;
+  background: rgb(26, 28, 30);
+  padding: 0px 4px;
+}
+input:not(:placeholder-shown) + .placeholder-label-dark {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.container-dark-sec input {
+  height: 40px;
+  width: 200px;
+  padding: 16px 0px 0px 10px; 
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(133, 133, 133, 0.18);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border: none;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.7);
+  margin-bottom: 25px;
+}
+.placeholder-label-dark-sec {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  top: 20px;
+  left: 14px;
+  font-size: 16px;
+  font-family: arial;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+/* Move placeholder when focused or has content */
+input:focus + .placeholder-label-dark-sec, input:not(:placeholder-shown) + .placeholder-label-dark-sec,input:focus:not(:placeholder-shown) + .placeholder-label-dark-sec  {
+  font-size: 12px;
+  font-weight: lighter;
+  top: 6px;
+  left: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  background: transparent;
+}
+
+.container-dark-tri input {
+  height: 20px;
+  width: 200px;
+  padding: 10px 10px 6px 0px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+  margin-bottom: 25px;
+}
+.placeholder-label-dark-tri {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  top: 15px;
+  left: 0px;
+  font-size: 16px;
+  font-family: arial;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+/* Move placeholder when focused or has content */
+input:focus + .placeholder-label-dark-tri, input:not(:placeholder-shown) + .placeholder-label-dark-tri,input:focus:not(:placeholder-shown) + .placeholder-label-dark-tri  {
+  font-size: 12px;
+  font-weight: lighter;
+  top: -8px;
+  left: 0px;
+  color: rgba(255, 255, 255, 0.5);
+  background: transparent;
+  padding: 0px 0px;
+}
+
+.placeholder-label-number {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgb(26, 28, 30);
+  padding: 0px 4px;
+  top: -10px;
+  left: 8px;
+  font-size: 14px;
+  font-family: arial;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+input:focus + .placeholder-label-number, input:not(:placeholder-shown) + .placeholder-label-number,input:focus:not(:placeholder-shown) + .placeholder-label-number  {
+  font-size: 12px;
+  color: rgb(144, 202, 249);
+  background: rgb(26, 28, 30);
+  padding: 0px 4px;
+}
+
+.placeholder-label-number-sec {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  font-family: arial;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+/* Move placeholder when focused or has content */
+input:focus + .placeholder-label-number-sec, input:not(:placeholder-shown) + .placeholder-label-number-sec,input:focus:not(:placeholder-shown) + .placeholder-label-number-sec  {
+  color: rgb(144, 202, 249);
+  background: transparent;
+}
+
+.placeholder-label-number-tri {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  top: -8px;
+  left: 0px;
+  font-size: 12px;
+  font-family: arial;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+/* Move placeholder when focused or has content */
+input:focus + .placeholder-label-number-tri, input:not(:placeholder-shown) + .placeholder-label-number-tri,input:focus:not(:placeholder-shown) + .placeholder-label-number-tri  {
+  color: rgb(144, 202, 249);
+  background: transparent;
+}
+
+.container-contact input {
+  height: 20px;
+  width: 170px;
+  padding: 10px 10px 6px 30px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  margin-bottom: 25px;
+}
+.container-contact input:focus {
+  color: white;
+  outline: 1px solid rgb(26, 28, 30);
+  border-bottom-color: rgb(144, 202, 249);
+}
+.placeholder-label-contact {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  top: -8px;
+  left: 0px;
+  font-size: 12px;
+  font-family: arial;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+/* Move placeholder when focused or has content */
+input:focus + .placeholder-label-contact, input:not(:placeholder-shown) + .placeholder-label-contact,input:focus:not(:placeholder-shown) + .placeholder-label-contact  {
+  color: rgb(144, 202, 249);
+  background: transparent;
+}
+.container-contact img {
+  position: absolute;
+  top: 2px;
+  left: -8px;
+  width: 40px;
+}
+
+.box-right-sec {
+  display: flex;
+  height: 40px;
+}
+.container-contact-sec img {
+  width: 40px;
+}
+.container-contact-sec input{
+  height: 20px;
+  width: 180px;
+  padding: 10px 10px 6px 0px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+}
+.container-contact-sec input:focus {
+  color: white;
+  outline: 1px solid rgb(26, 28, 30);
+  border-bottom-color: rgb(144, 202, 249);
+}
+.placeholder-label-contact-sec {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  top: 9px;
+  left: 0px;
+  font-size: 16px;
+  font-family: arial;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+/* Move placeholder when focused or has content */
+input:focus + .placeholder-label-contact-sec, input:not(:placeholder-shown) + .placeholder-label-contact-sec,input:focus:not(:placeholder-shown) + .placeholder-label-contact-sec  {
+  font-size: 12px;
+  font-weight: lighter;
+  top: -8px;
+  left: 0px;
+  color: rgb(144, 202, 249);
+  background: transparent;
+  padding: 0px 0px;
+}
+
+.container-pink input{
+  height: 40px;
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  border: 2px solid rgb(206, 147, 216);
+  background-color: transparent;
+  border-radius: 4px;
+  margin-bottom: 25px;
+}
+.container-pink input:focus{
+  outline: rgb(206, 147, 216);
+  color: white;
+}
+/* Label-like placeholder text */
+.placeholder-label-pink {
+  position: absolute;
+  font-size: 12px;
+  font-weight: lighter;
+  top: -8px;
+  left: 8px;
+  color: rgb(206, 147, 216);
+  background: rgb(26, 28, 30);
+  padding: 0px 4px;
+  font-family: arial;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+.container-green input {
+  height: 40px;
+  width: 200px;
+  padding: 17px 0px 0px 10px; 
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(133, 133, 133, 0.15);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border: none;
+  border-bottom: 2px solid rgb(102, 187, 106);
+  margin-bottom: 25px;
+}
+.container-green input:focus {
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+  border-bottom-color: rgb(102, 187, 106);
+}
+.placeholder-label-green {
+  position: absolute;
+  color: rgb(102, 187, 106);
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  font-family: arial;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+.container-orange input{
+  height: 20px;
+  width: 200px;
+  padding: 10px 10px 6px 0px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-bottom: 2px solid rgb(255, 167, 38);
+  background-color: transparent;
+  margin-bottom: 25px;
+}
+.container-orange input:focus {
+  color: white;
+  outline: 1px solid rgb(26, 28, 30);
+  border-bottom-color: rgb(255, 167, 38);
+}
+.placeholder-label-orange {
+  position: absolute;
+  color: rgb(255, 167, 38);
+  top: -8px;
+  left: 0px;
+  font-size: 12px;
+  font-family: arial;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+.index-sec {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0px ;
+}
+.navigation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  vertical-align: middle;
+}
+.navigation input {
+  height: 48px;
+  width: 340px;
+  font-size: 16px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.051), rgba(255, 255, 255, 0.051));
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14);
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  padding-left: 55px;
+  
+}
+.navigation input:focus {
+  outline: none;
+  color: rgb(255, 255, 255);
+}
+.navigation input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.navi {
+  position: absolute;
+  background-color: transparent;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  left: 5px;
+  align-items: center;
+}
+.navi img {
+  width: 20px;
+}
+.search {
+  position: absolute;
+  background-color: transparent;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  right: 53px;
+}
+.search img {
+  width: 22px;
+}
+.directions {
+  position: absolute;
+  background-color: transparent;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  right: 4px;
+}
+.directions img {
+  width: 30px;
+}
+.directions:hover {
+  background-color: rgba(144, 202, 249, 0.1);
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.07);
+} 
+.dash {
+  position: absolute;
+  content: " ";
+  width: 0.5px;
+  height: 28px;
+  background-color: rgba(255, 255, 255, 0.09);
+  right: 50px;
+}
