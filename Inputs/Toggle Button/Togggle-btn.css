@@ -1,0 +1,466 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(15, 18, 20);
+  justify-content: center;
+}
+
+.box {
+  display: flex;
+  margin-top: 50px;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hide the default checkbox */
+.custom-checkbox input[type="checkbox"], .custom-checkbox-middle input[type="checkbox"], .custom-checkbox-last input[type="checkbox"], .custom-checkbox-text input[type="radio"], .custom-checkbox-text-middle input[type="radio"], .custom-checkbox-text-last input[type="radio"], .custom-checkbox-last-sec input[type="checkbox"], .custom-radio input[type="radio"], .custom-radio-last input[type="radio"] {
+  display: none;
+}
+
+/* Style the custom checkbox */
+.custom-checkbox .checkbox {
+  width: 47px;
+  height: 47px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.custom-checkbox:hover .checkbox:hover, .custom-checkbox-middle:hover .checkbox-middle:hover, .custom-checkbox-text:hover .checkbox-text:hover, .custom-checkbox-text-middle:hover .checkbox-text-middle:hover, .custom-checkbox-text-last:hover, .custom-radio:hover .radio, .custom-radio-last:hover .radio-last, .custom-checkbox-check:hover .checkbox-check {
+  background-color: rgba(255, 255, 255, 0.08);
+} 
+.custom-checkbox:active .checkbox:active, .custom-checkbox-middle:active .checkbox-middle:active, .custom-radio:active .radio:active, .custom-radio-last:active .radio-last:active, .custom-checkbox-check:active .checkbox-check:active {
+  background-color: rgba(255, 255, 255, 0.5);
+} 
+
+/* Style for checked state */
+.custom-checkbox input[type="checkbox"]:checked + .checkbox, .custom-checkbox-middle input[type="checkbox"]:checked + .checkbox-middle, .custom-checkbox-last input[type="checkbox"]:checked + .checkbox-last, .custom-checkbox-last-sec input[type="checkbox"]:checked + .checkbox-last-sec, .custom-radio input[type="radio"]:checked + .radio, .custom-radio-last input[type="radio"]:checked + .radio-last {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+button {
+  position: relative;
+  margin: 10px 0px;
+  padding: 0;
+  height: 47px;
+  width: 47px;
+  background-color: transparent;
+  vertical-align: middle;
+  border: none;
+}
+
+img {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  background-color: transparent;
+  top: 9px;
+  left: 8px;
+}
+
+.icon {
+  position: absolute;
+  width: 18px;
+  top: 15px;
+  left: 15px;
+  background-color: transparent;
+}
+.icon-line {
+  position: absolute;
+  width: 20px;
+  top: 14px;
+  left: 14px;
+  background-color: transparent;
+}
+.icon-fill {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 24px;
+  top: 12px;
+  left: 10px;
+  background-color: transparent;
+}
+.icon-down {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 17.5px;
+  top: 17px;
+  left: 37px;
+  background-color: transparent;
+}
+
+.custom-checkbox-middle .checkbox-middle {
+  width: 47px;
+  height: 47px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+}
+.custom-checkbox-last .checkbox-last {
+  width: 47px;
+  height: 47px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.custom-checkbox-last-sec .checkbox-last-sec {
+  width: 65px;
+  height: 47px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.custom-checkbox-text .checkbox-text {
+  width: 55px;
+  height: 47px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.checkbox-text::after {
+  content: "WEB";
+  font-family: arial;
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  left: 11.5px;
+  top: 15px;
+  color: rgb(255, 255, 255);
+}
+.checkbox-text-middle::after {
+  content: "ANDROID";
+  font-family: arial;
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  left: 11.5px;
+  top: 15px;
+  color: rgb(255, 255, 255);
+}
+.checkbox-text-last::after {
+  content: "IOS";
+  font-family: arial;
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  left: 11.5px;
+  top: 15px;
+  color: rgb(255, 255, 255);
+}
+
+/* Style for checked state */
+.custom-checkbox-text input[type="radio"]:checked + .checkbox-text, .custom-checkbox-text-middle input[type="radio"]:checked + .checkbox-text-middle, .custom-checkbox-text-last input[type="radio"]:checked + .checkbox-text-last {
+  background-color: rgba(144, 202, 249, 0.3);
+}
+
+.custom-checkbox-text input[type="radio"]:checked + .checkbox-text::after  {
+  content: "WEB";
+  font-family: arial;
+  font-size: 14px;
+  font-weight: 400;
+  position: absolute;
+  left: 11.5px;
+  top: 15px;
+  color: rgb(144, 202, 249);
+}
+.custom-checkbox-text-middle input[type="radio"]:checked + .checkbox-text-middle::after  {
+  content: "ANDROID";
+  font-family: arial;
+  font-size: 14px;
+  font-weight: 400;
+  position: absolute;
+  left: 11.5px;
+  top: 15px;
+  color: rgb(144, 202, 249);
+}
+.custom-checkbox-text-last input[type="radio"]:checked + .checkbox-text-last::after  {
+  content: "IOS";
+  font-family: arial;
+  font-size: 14px;
+  font-weight: 400;
+  position: absolute;
+  left: 11.5px;
+  top: 15px;
+  color: rgb(144, 202, 249);
+}
+
+.custom-checkbox-text-middle .checkbox-text-middle {
+  width: 87px;
+  height: 47px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+}
+.custom-checkbox-text-last .checkbox-text-last {
+  width: 47px;
+  height: 47px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.box-sec {
+  margin: 40px 0px;
+}
+.container-sec {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn-sec{
+  position: relative;
+  margin: 0px;
+  padding: 0;
+  height: 47px;
+  width: 47px;
+  background-color: transparent;
+  vertical-align: middle;
+  border: none;
+}
+.radio-img {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 19px;
+  top: 14px;
+  left: 14px;
+}
+.radio-img-sec {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 27px;
+  top: 12px;
+  left: 10px;
+}
+.custom-radio .radio {
+  width: 47px;
+  height: 47px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.custom-radio-last .radio-last {
+  width: 47px;
+  height: 47px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.container-check {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-checkbox-check input[type="checkbox"] {
+  display: none;
+}
+.custom-checkbox-check .checkbox-check {
+  width: 47px;
+  height: 47px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+}
+.custom-checkbox-check::after  {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  width: 6px;
+  height: 18px;
+  border: solid rgb(255, 255, 255);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(47deg);
+  -ms-transform: rotate(47deg);
+  transform: rotate(47deg);
+}
+
+/* Style for checked state */
+.custom-checkbox-check input[type="checkbox"]:checked + .checkbox-check  {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Style for the checkmark */
+.custom-checkbox-check input[type="checkbox"]:checked + .checkbox-check::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  width: 6px;
+  height: 18px;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(47deg);
+  -ms-transform: rotate(47deg);
+  transform: rotate(47deg);
+}
+
+
+.block {
+  margin: 30px 0px;
+  padding: 0;
+  justify-items: center;
+}
+.box-tri {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(18, 18, 18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  padding-right: 16px;
+}
+.container-radio {
+  margin: 0;
+  border-radius: 4px;
+}
+.btn-radio {
+  margin: 0px 0px;
+  background-color: rgb(18, 18, 18);
+  border-radius: 4px;
+}
+.block-left {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.block-mid {
+  content: " ";
+  height: 30px;
+  width: 0.1px;
+  margin: 8px 5px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.block-right {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.custom-radio-sec input[type="radio"], .custom-checkbox-tri input[type="checkbox"], .custom-radio-sec-last input[type="radio"], .custom-checkbox-tri-last input[type="checkbox"] {
+  display: none;
+}
+.custom-radio-sec .radio-sec, .custom-radio-sec-last {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+}
+.custom-radio-sec:hover .radio-sec:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+} 
+.custom-radio-sec:hover .radio-sec:active {
+  background-color: rgba(255, 255, 255, 0.5);
+} 
+.custom-radio-sec input[type="radio"]:checked + .radio-sec {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.custom-checkbox-tri .checkbox-tri {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+}
+.custom-checkbox-tri:hover .checkbox-tri:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.custom-checkbox-tri:active .checkbox-tri:active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.custom-checkbox-tri input[type="checkbox"]:checked + .checkbox-tri {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.custom-checkbox-tri-last .checkbox-tri-last {
+  width: 57px;
+  height: 37px;
+  border: none;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+}
