@@ -1,0 +1,416 @@
+body {
+  background-color: rgb(29, 33, 38);
+  justify-items: center;
+  color: white;
+  font-family: arial;
+}
+
+.box {
+  margin: 40px 0px;
+  padding: 10px 0px;
+  width: 360px;
+  background-color: rgb(18, 18, 18);
+}
+
+.icon {
+  width: 20px;
+  border-radius: 4px;
+  margin-left: 18px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+}
+.block {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 70px 1fr;
+  height: 48px;
+  width: 100%;
+}
+.block:hover, .block-sec:hover, .block-quad:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.block:active, .block-sec:active, .block-quad:active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.container-dash {
+  content: " ";
+  width: 100%;
+  height: 0.8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 8px 0px;
+}
+.text-sec {
+  margin-left: 18px;
+}
+
+.block-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+  font-size: 14px;
+  height: 42px;
+  align-content: center;
+}
+
+.icon-sec {
+  width: 20px;
+  border-radius: 4px;
+  margin-left: 18px;
+}
+.block-sec {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 70px 1fr;
+  height: 72px;
+  width: 100%;
+}
+
+.block-tri {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 70px 1fr;
+  height: 72px;
+  width: 100%;
+}
+.text-dat {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  height: 42px;
+  align-content: center;
+}
+.icon-sec {
+  width: 42px;
+  border-radius: 4px;
+  margin-left: 14px;
+}
+
+.icon-tri {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+.block-tri-sec {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 70px 1fr;
+  height: 92px;
+  width: 100%;
+}
+.container-dash-sec {
+  content: " ";
+  width: 290px;
+  height: 0.8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 8px 0px 8px 70px;
+}
+
+button {
+  width: 0px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  margin-left: 12px;
+}
+.block-quad {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 70px 232px 1fr;
+  height: 48px;
+  width: 100%;
+}
+.container-checkbox {
+  position: relative;
+  display: flex;
+  background-color: rgb(18, 18, 18);
+  width: 0px;
+}
+/* Hide the default checkbox */
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+/* Style the custom checkbox */
+.custom-checkbox .checkbox {
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  transition: background-color 0.1s, border-color 0.1s;
+}
+/* Style for checked state */
+.custom-checkbox input[type="checkbox"]:checked + .checkbox {
+  background-color: rgb(144, 202, 249);
+  border-color: rgb(144, 202, 249);
+}
+/* Style for the checkmark */
+.custom-checkbox input[type="checkbox"]:checked + .checkbox::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  bottom: 3px;
+  width: 5px;
+  height: 12px;
+  border: solid rgb(29, 33, 38);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(47deg);
+  -ms-transform: rotate(47deg);
+  transform: rotate(47deg);
+}
+.mess {
+  width: 25px;
+  vertical-align: middle;
+}
+.mess-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+}
+.mess-btn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.checkbox-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  padding-left: 12px;
+}
+.checkbox-btn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.box-sec {
+  margin: 40px 0px;
+  padding: 0;
+  width: 360px;
+  background-color: rgb(18, 18, 18);
+  padding-bottom: 10px;
+}
+.block-settings {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 70px 218px 1fr;
+  height: 54px;
+  width: 100%;
+}
+.container-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.switch  {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 14px;
+}
+.switch input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+} 
+.slider:before   {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  left: -2.5px;
+  top: -3.3px;
+  background-color: rgb(224, 224, 224);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.switch:hover .slider:before {
+  box-shadow:  0px 0px 0px 8px rgba(224, 224, 224, 0.1);
+}
+input:checked + .slider {
+  background-color: rgba(144, 202, 249, 0.6);
+}
+input:checked + .slider:before{
+  background-color: rgb(144, 202, 249);
+}
+input:checked + .slider:hover:before {
+  box-shadow:  0px 0px 0px 8px rgba(144, 220, 249, 0.1);
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px); 
+}
+
+.box-fix {
+  margin: 40px 0px;
+  padding: 0;
+  width: 360px;
+  height: 349px;
+  background-color: rgb(18, 18, 18);
+  padding-bottom: 10px;
+  overflow: auto;
+  scrollbar-color: rgba(255, 255, 255, 0.22) rgba(255, 255, 255, 0.22);
+}
+.block-list {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.7);
+}
+.block-list-head {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgb(18, 18, 18);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.blue-box {
+  width: 256px;
+  border-radius: 2px;
+  background-color: rgb(23, 46, 66);
+  padding-bottom: 16px;
+}
+.blue-box-one {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 46px;
+  background-color: rgb(5, 30, 52);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.blue-box-one:hover {
+  background-color: rgba(255, 255, 255, 0.01);
+}
+.fire {
+  font-size: 20px;
+  padding-left: 20px;
+}
+.blue-text {
+  font-size: 20px;
+}
+.blue-box-two {
+  display: grid;
+  grid-template-columns: 210px 1px 1fr;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+  background-color: rgb(5, 30, 52);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.blue-box-left {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+}
+.blue-box-left:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.home {
+  padding-left: 18px;
+  width: 25px;
+}
+.blue-text-sec {
+  font-size: 14px;
+  color: rgb(102, 157, 246);
+}
+.blue-dash {
+  content: " ";
+  width: 1px;
+  height: 34px;
+  background-color: rgb(255, 255, 255, 0.1);
+}
+.set {
+  width: 18px;
+  padding-top: 5px;
+  padding-left: 12px;
+  font-weight: 700;
+}
+.blue-box-three {
+  display: flex;
+  align-items: center;
+  height: 58px;
+  width: 100%;
+  background-color: rgba(23, 46, 66, 0.1); 
+}
+.blue-box-three:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.build {
+  padding-left: 20px;
+  font-size: 15px;
+  font-weight: 520;
+}
+.blue-box-four {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  align-items: center;
+  height: 32px;
+  width: 100%;
+  background-color: rgba(23, 46, 66, 0.1); 
+}
+.blue-box-four:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.blue-text-tri {
+  font-size: 14px;
+}
+.people {
+  width: 18px;
+  padding-left: 22px;
+}
+.data {
+  width: 18px;
+  padding-left: 22px;
+}
+.file {
+  width: 18px;
+  padding-left: 22px;
+}
+.globe {
+  width: 25px;
+  padding-left: 22px;
+}
