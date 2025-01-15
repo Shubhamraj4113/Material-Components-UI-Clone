@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(29, 33, 38);
+  margin: 0;
+  padding: 0;
+  color: rgb(255, 255, 255);
+  justify-items: center;
+}
+
+.block {
+  width: 524px;
+  margin: 50px 0px;
+  padding: 0px 0px;
+  background-color: rgb(36, 37, 37);
+  border-radius: 4px;
+  overflow-x: auto;
+  scrollbar-color: rgb(255, 255, 255, 0.3) rgba(255, 255, 255, 0.2);
+}
+.table-one, .table-head {
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+.table-row {
+  display: grid;
+  grid-template-columns: 219px 104px 90px 112px 123px;
+  align-items: center;
+  height: 56px;
+  width: 100%;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+}
+.text-left {
+  text-align: left;
+  font-size: 14px;
+  padding-left: 16px;
+}
+.text-right {
+  text-align: end;
+  font-size: 14px;
+  padding-right: 16px;
+}
+
+.table-row-sec {
+  display: grid;
+  grid-template-columns: 219px 104px 90px 112px 123px;
+  align-items: center;
+  height: 36px;
+  width: 100%;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+}
+
+.table-row-tri {
+  display: grid;
+  grid-template-columns: 219px 104px 90px 112px 123px;
+  align-items: center;
+  height: 56px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+}
+.table-row-quad {
+  display: grid;
+  grid-template-columns: 219px 104px 90px 112px 123px;
+  align-items: center;
+  height: 56px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+}
+
+.table-row-duo {
+  display: grid;
+  grid-template-columns: 542px 157px;
+  align-items: center;
+  height: 56px;
+  width: 100%;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+}
+.text-centre {
+  text-align: center;
+  font-size: 14px;
+}
+.table-row-five {
+  display: grid;
+  grid-template-columns: 284px 117px 141px 157px;
+  align-items: center;
+  height: 56px;
+  width: 100%;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+}
+.empty {
+  width: 284px;
+  height: 54.5px;
+  background-color: rgb(36, 37, 37);
+}
+.table-row-six {
+  display: grid;
+  grid-template-columns: 283px 258px 158px;
+  align-items: center;
+  height: 56px;
+  width: 100%;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+}
+.table-row-seven {
+  display: grid;
+  grid-template-columns: 283px 117px 141px 158px;
+  align-items: center;
+  height: 56px;
+  width: 100%;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+}
