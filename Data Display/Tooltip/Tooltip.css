@@ -1,0 +1,420 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(29, 33, 38);
+  margin: 0;
+  padding: 0;
+  color: rgb(255, 255, 255);
+  justify-items: center;
+}
+
+.tooltip {
+  position: relative;
+  margin: 20px 0px;
+}
+.tooltip-sec{
+  position: relative;
+}
+.tooltip:hover .tooltip-icon, .tooltip:hover .tooltip-text-one, .tooltip:hover .tooltip-text-two, .tooltip:hover .tooltip-text, .tooltip-sec:hover .top-start, .tooltip-sec:hover .top, .tooltip-sec:hover .top-end, .tooltip-sec:hover .left-start, .tooltip-sec:hover .left, .tooltip-sec:hover .left-end, .tooltip-sec:hover .right-start, .tooltip-sec:hover .right, .tooltip-sec:hover .right-end, .tooltip-sec:hover .bottom-start, .tooltip-sec:hover .bottom, .tooltip-sec:hover .bottom-end {
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: 0.2s;
+}
+.tooltip-btn-delete {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+}
+.tooltip-btn-delete:hover {
+  background-color: rgba(255, 255, 255, 0.09);
+}
+.icon {
+  width: 22px;
+  margin-top: 2px;
+}
+.tooltip-icon {
+  position: absolute;
+  bottom: -35px;
+  left: -5px;
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease; 
+  transition-delay: 0.1s;
+}
+
+.text-box {
+  margin: 50px;
+  padding: 25px;
+  width: 520px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  justify-items: center;
+}
+.text-top {
+  display: flex;
+}
+.top-start {
+  position: absolute;
+  top: -35px;
+  left: 0px;
+  font-size: 12px;
+  background-color: rgb(128, 128, 128);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.1s ease; 
+  transition-delay: 0.1s;
+}
+.top {
+  position: absolute;
+  top: -35px;
+  left: 9px;
+  font-size: 12px;
+  background-color: rgb(128, 128, 128);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.1s ease; 
+  transition-delay: 0.1s;
+}
+.top-end {
+  position: absolute;
+  top: -35px;
+  right: 0px;
+  font-size: 12px;
+  background-color: rgb(128, 128, 128);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.1s ease; 
+  transition-delay: 0.1s;
+}
+.text-btn {
+  padding: 10px 14px;
+  background-color: transparent;
+  border: none;
+  color: rgb(144, 202, 249);
+  font-size: 14px;
+  font-weight: 540;
+  border-radius: 4px;
+}
+.text-btn:hover {
+  background-color: rgb(144, 202, 249, 0.2);
+}
+.text-mid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+.text-mid-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.left-start {
+  position: absolute;
+  top: 0;
+  left: -45px;
+  font-size: 12px;
+  background-color: rgb(128, 128, 128);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.1s ease; 
+  transition-delay: 0.1s;
+}
+.left {
+  position: absolute;
+  top: 5.5px;
+  left: -45px;
+  font-size: 12px;
+  background-color: rgb(128, 128, 128);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.1s ease; 
+  transition-delay: 0.1s;
+}
+.left-end {
+  position: absolute;
+  left: -45px;
+  bottom: 0;
+  font-size: 12px;
+  background-color: rgb(128, 128, 128);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.1s ease; 
+  transition-delay: 0.1s;
+}
+.text-mid-right {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.right-start {
+  position: absolute;
+  top: 0;
+  right: -45px;
+  font-size: 12px;
+  background-color: rgb(128, 128, 128);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.1s ease; 
+  transition-delay: 0.1s;
+}
+.right {
+  position: absolute;
+  top: 5.5px;
+  right: -45px;
+  font-size: 12px;
+  background-color: rgb(128, 128, 128);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.1s ease; 
+  transition-delay: 0.1s;
+}
+.right-end {
+  position: absolute;
+  bottom: 0;
+  right: -45px;
+  font-size: 12px;
+  background-color: rgb(128, 128, 128);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.1s ease; 
+  transition-delay: 0.1s;
+}
+.bottom-start {
+  position: absolute;
+  bottom: -35px;
+  left: 0px;
+  font-size: 12px;
+  background-color: rgb(128, 128, 128);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.1s ease; 
+  transition-delay: 0.1s;
+}
+.bottom {
+  position: absolute;
+  bottom: -35px;
+  left: 24.5px;
+  font-size: 12px;
+  background-color: rgb(128, 128, 128);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.1s ease; 
+  transition-delay: 0.1s;
+}
+.bottom-end {
+  position: absolute;
+  bottom: -35px;
+  right: 0px;
+  font-size: 12px;
+  background-color: rgb(128, 128, 128);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.1s ease; 
+  transition-delay: 0.1s;
+}
+
+.btn-box {
+  display: flex;
+}
+
+.tooltip-text-one {
+  position: absolute;
+  bottom: -35px;
+  left: 15px;
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  padding: 5px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease;
+  transition-delay: 0.1s;
+}
+.tooltip-text-two {
+  position: absolute;
+  bottom: -35px;
+  left: 38px;
+  font-size: 12px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 5px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease;
+  transition-delay: 0.1s;
+}
+.tooltip-text-two::after {
+  content: "";
+  position: absolute;
+  top: -9px; /* Position the arrow at the bottom of the tooltip */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgb(0, 0, 0) transparent; /* Arrow color */
+}
+.tooltip-text-three {
+  position: absolute;
+  bottom: -75px;
+  height: 50px;
+  width: 200px;
+  font-size: 12px;
+  left: -70px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  padding: 5px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-10px) scale(0.9);
+  transition: opacity 0.1s, transform 0.3s ease;
+  transition-delay: 0.1s;
+}
+.tooltip:hover .tooltip-text-three {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1.1);
+}
+.tooltip-text-three div {
+  padding: 0;
+  margin: 0;
+}
+.tooltip-text-three-one {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+.tooltip-text-three-two {
+  font-style: italic;
+  font-weight: 100;
+  font-size: 12px;
+}
+.toolptip-text-three-three {
+  font-size: 12px;
+  font-weight: bold;
+}
+.tooltip-text-three-four {
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.tooltip-text {
+  position: absolute;
+  bottom: -35px;
+  left: 18px;
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease; 
+  transition-delay: 0.1s;
+}
+.tooltip-text-fade {
+  position: absolute;
+  visibility: hidden;
+  bottom: -35px;
+  left: 13px;
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+}
+.tooltip:hover .tooltip-text-fade {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+.tooltip-text-sample {
+  position: absolute;
+  bottom: -35px;
+  left: 23px;
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.1s ease; 
+  transition-delay: 0.1s;
+  transform: translate3d(0,-10px,0);
+  transition: all .15s ease-in-out;
+}
+.tooltip:hover .tooltip-text-sample {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate3d(0,0,0);
+}
+.tooltip-text-zoom {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.1s ease; 
+  transition-delay: 0.1s;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: top;
+}
+.tooltip:hover .tooltip-text-zoom {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) scale(1);
+}
