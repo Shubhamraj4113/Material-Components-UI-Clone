@@ -1,0 +1,119 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(29, 33, 38);
+  margin: 0;
+  padding: 0;
+  justify-items: center;
+}
+
+.nav-container {
+  display: flex;
+  margin: 30px 0px;
+  cursor: pointer;
+}
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  width: 140px;
+  padding: 0px 12px;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgb(18, 18, 18);
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+.nav-text {
+  font-size: 14px;
+}
+.nav-item input[type="radio"] {
+  display: none;
+}
+.nav-item label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.25s ease;
+}
+.nav-item label .icon {
+  padding: 0;
+  margin: 0;
+  height: 24px;
+  font-size: 24px;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+.nav-item input[type="radio"]:checked + label {
+  color: rgb(144, 202, 249);
+  transform: scale(1.02);
+}
+.nav-item input[type="radio"]:checked + label .icon {
+  color: rgb(144, 202, 249);
+  transform: scale(1.02);
+}
+.icons-prop {
+  user-select: none;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  flex-shrink: 0;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  fill: currentColor;
+  font-size: 1.5rem;
+}
+
+.container-inbox {
+  position: relative;
+  height: 450px;
+  width: 525px;
+  background-color: rgb(1, 1, 1);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.092), rgba(255, 255, 255, 0.092));
+  color: rgb(255, 255, 255);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-top: 10px;
+  margin: 30px 30px;
+}
+.inbox-message {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  padding: 8px 16px;
+  align-items: center;
+  background-color: rgb(1, 1, 1);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.092), rgba(255, 255, 255, 0.092));
+  cursor: pointer;
+  user-select: none;
+}
+.inbox-message:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+}
+.inbox-message:active {
+  background-color: rgb(255, 255, 255, 0.2);
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.text-head {
+  font-size: 16px;
+  line-height: 24px;
+}
+.text-message {
+  font-size: 14px;
+  line-height: 20px;
+}
+.profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.nav-container-sec {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  background-color: rgb(18, 18, 18);
+}
