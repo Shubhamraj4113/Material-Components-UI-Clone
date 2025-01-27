@@ -1,0 +1,234 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(29, 33, 38);
+  margin: 0;
+  padding: 0;
+  justify-items: center;
+}
+
+
+.container {
+  margin: 30px 0px;
+}
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 0;
+}
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  user-select: none;
+  flex-shrink: 0;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  fill: currentColor;
+  font-size: inherit;
+}
+
+.container-btns {
+  display: flex;
+  text-align: center;
+  gap: 6px;
+}
+.radio-btn:hover, .icon-btn:hover, .icon-btn-outlined:hover, .icon-btn-sec:hover, .radio-btn-sec:hover, .icon-btn-outlined-sec:hover, .radio-btn-outlined-sec:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+.radio-btn {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+}
+/* Hide the default checkbox */
+.custom-radio input[type="radio"], .custom-radio-blue input[type="radio"], .custom-radio-pink input[type="radio"], .custom-radio-outlined input[type="radio"], .custom-radio-outlined-blue input[type="radio"], .custom-radio-outlined-pink input[type="radio"], .custom-radio-outlined-sec input[type="radio"] {
+  display: none;
+}
+/* Style the custom checkbox */
+.custom-radio .checkmark, .custom-radio-blue .checkmark-blue, .custom-radio-pink .checkmark-pink {
+  position: relative; 
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 2px solid transparent;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+}
+/* Style for checked state */
+.custom-radio input[type="radio"]:checked + .checkmark {
+  border-color: rgba(255, 255, 255, 0.0);
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.text-numbs {
+  font-size: 14px;
+}
+
+.custom-radio-blue input[type="radio"]:checked + .checkmark-blue {
+  color: rgb(0, 0, 0);
+  border-color: rgba(255, 255, 255, 0.0);
+  background-color: rgb(147, 202, 249);
+}
+.custom-radio-blue:hover input[type="radio"]:checked + .checkmark-blue:hover {
+  border-color: rgba(255, 255, 255, 0.0);
+  background-color: rgb(66, 165, 245);
+}
+
+.custom-radio-pink input[type="radio"]:checked + .checkmark-pink {
+  color: rgb(0, 0, 0);
+  border-color: rgba(255, 255, 255, 0.0);
+  background-color: rgb(206, 147, 216);
+}
+.custom-radio-pink:hover input[type="radio"]:checked + .checkmark-pink:hover {
+  border-color: rgba(255, 255, 255, 0.0);
+  background-color: rgb(171, 71, 188);
+}
+
+.icon-btn-outlined {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  color: rgb(255, 255, 255);
+  padding: 0;
+}
+.custom-radio-outlined .checkmark-outlined, .custom-radio-outlined-blue .checkmark-outlined-blue, .custom-radio-outlined-pink .checkmark-outlined-pink {
+  position: relative; 
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  background-color: transparent;
+  border-radius: 50%;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+}
+/* Style for checked state */
+.custom-radio-outlined input[type="radio"]:checked + .checkmark-outlined {
+  border-color: rgba(255, 255, 255, 0.23);
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+.custom-radio-outlined-blue input[type="radio"]:checked + .checkmark-outlined-blue {
+  color: rgb(147, 202, 249);
+  border-color: rgba(147, 202, 249, 0.5);
+  background-color: rgb(147, 202, 249, 0.36);
+}
+.custom-radio-outlined-blue:hover input[type="radio"]:checked + .checkmark-outlined-blue:hover {
+  border-color: rgb(147, 202, 249);
+  background-color: rgba(147, 202, 249, 0.4);
+}
+
+.custom-radio-outlined-pink input[type="radio"]:checked + .checkmark-outlined-pink {
+  color: rgb(206, 147, 216);
+  border-color: rgba(206, 147, 216, 0.5);
+  background-color: rgba(206, 147, 216, 0.24);
+}
+.custom-radio-outlined-pink:hover input[type="radio"]:checked + .checkmark-outlined-pink:hover {
+  border-color: rgba(206, 147, 216, 0.5);
+  background-color: rgba(206, 147, 216, 0.36);
+}
+
+.icon-btn-sec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 0;
+}
+.radio-btn-sec {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+}
+/* Hide the default checkbox */
+.custom-radio-sec input[type="radio"]{
+  display: none;
+}
+/* Style the custom checkbox */
+.custom-radio-sec .checkmark-sec {
+  position: relative; 
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 2px solid transparent;
+  background-color: transparent;
+  border-radius: 4px;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+}
+/* Style for checked state */
+.custom-radio-sec input[type="radio"]:checked + .checkmark-sec {
+  border-color: rgba(255, 255, 255, 0.0);
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+.icon-btn-outlined-sec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  color: rgb(255, 255, 255);
+  padding: 0;
+}
+.custom-radio-outlined-sec .checkmark-outlined-sec {
+  position: relative; 
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  background-color: transparent;
+  border-radius: 4px;
+  transition: background-color 0.1s, border-color 0.1s;
+  cursor: pointer;
+}
+/* Style for checked state */
+.custom-radio-outlined-sec input[type="radio"]:checked + .checkmark-outlined-sec {
+  border-color: rgba(255, 255, 255, 0.23);
+  background-color: rgba(255, 255, 255, 0.16);
+}
